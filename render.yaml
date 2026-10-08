@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: studentiQ-performance
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python train.py
+    startCommand: gunicorn app:app
+    healthCheckPath: /health
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: DATABASE_URL
+        sync: false
+

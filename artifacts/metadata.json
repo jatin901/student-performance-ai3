@@ -1,0 +1,27 @@
+{
+  "target": "math_score",
+  "best_model": "Ridge Regression",
+  "features": [
+    "gender",
+    "race_ethnicity",
+    "parental_level_of_education",
+    "lunch",
+    "test_preparation_course",
+    "reading_score",
+    "writing_score"
+  ],
+  "categorical_features": [
+    "gender",
+    "race_ethnicity",
+    "parental_level_of_education",
+    "lunch",
+    "test_preparation_course"
+  ],
+  "numeric_features": ["reading_score", "writing_score"],
+  "dataset_rows": 1000,
+  "test_size": 0.2,
+  "random_state": 42,
+  "evaluation": {"mae": 4.2111, "rmse": 5.3904, "r2": 0.8806},
+  "residual_std": 5.4039,
+  "validation": "80/20 held-out split; seed 42"
+}
